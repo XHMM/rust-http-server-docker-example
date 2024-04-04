@@ -9,11 +9,15 @@ A dockerized rust http server, it implements an endpoint using tinyapi for image
 ## Build and run
 
 ### Build
-
-You need to set the build argument `BUILD_TARGET` into your target name.
+We need get the target name when building rust application, you can set the target name from cli:
 
 ```shell
 docker build --build-arg BUILD_TARGET=image-compress -t rust-http-demo .
+```
+
+or update the first line in the `Dockerfile`:
+```dockerfile
+ARG BUILD_TARGET=image-compress
 ```
 
 ### Run
